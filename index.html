@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeMaster: NASA Mission</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Welcome Screen -->
+    <section id="welcome-screen">
+
+        <h1>⌨️ TypeMaster</h1>
+
+        <p class="subtitle">
+            NASA TYPING MISSION
+        </p>
+
+        <p class="description">
+            Your mission is to transmit the message before communication is lost.
+        </p>
+
+        <button id="startBtn">
+            BEGIN MISSION
+        </button>
+
+    </section>
+
+    <!-- Loading Screen -->
+    <section id="loading-screen">
+
+        <h2>INITIALIZING NASA SYSTEM...</h2>
+
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+
+        <p id="loading-text">
+            Connecting to Mission Control...
+        </p>
+
+    </section>
+
+    <!-- Mission Screen -->
+   <section id="mission-screen">
+
+    <h2>🚀 NASA MISSION</h2>
+
+    <p class="mission-status">
+        Communication Link Active
+    </p>
+
+    <div class="mission-info">
+
+        <p>⏱ Time Left:
+            <span id="time">30</span>s
+        </p>
+
+        <p>⚡ WPM:
+            <span id="wpm">0</span>
+        </p>
+
+    </div>
+
+    <div id="text" class="mission-text">
+
+    </div>
+
+    <textarea
+        id="typingInput"
+        placeholder="Start typing here..."
+    ></textarea>
+
+</section>
+
+    <!-- Result Screen -->
+    <section id="result-screen">
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
