@@ -1,86 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TypeMaster: NASA Mission</title>
+    <title>TypeMaster</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Welcome Screen -->
-    <section id="welcome-screen">
+    <div class="container">
+<div id="bootScreen">
 
-        <h1>⌨️ TypeMaster</h1>
+    <pre id="bootText"></pre>
 
-        <p class="subtitle">
-            NASA TYPING MISSION
-        </p>
+</div>
+        <!-- Welcome Screen -->
 
-        <p class="description">
-            Your mission is to transmit the message before communication is lost.
-        </p>
+        <div id="welcomeScreen">
 
-        <button id="startBtn">
-            BEGIN MISSION
-        </button>
+            <h1>⌨️𝚃𝚢𝚙𝚎 𝙼𝚊𝚜𝚝𝚎𝚛</h1>
 
-    </section>
+            <p class="subtitle">
+                Test your typing speed and accuracy.
+            </p>
 
-    <!-- Loading Screen -->
-    <section id="loading-screen">
+            <button id="startBtn">
+                ▶ START
+            </button>
 
-        <h2>INITIALIZING NASA SYSTEM...</h2>
-
-        <div class="loading-bar">
-            <div class="loading-progress"></div>
         </div>
 
-        <p id="loading-text">
-            Connecting to Mission Control...
-        </p>
+        <!-- Game Screen -->
 
-    </section>
+        <div id="gameScreen" class="hidden">
 
-    <!-- Mission Screen -->
-   <section id="mission-screen">
+            <div class="stats">
 
-    <h2>🚀 NASA MISSION</h2>
+                <div class="card">
+                    <h3>TIME</h3>
+                    <p id="time">30</p>
+                </div>
 
-    <p class="mission-status">
-        Communication Link Active
-    </p>
+                <div class="card">
+                    <h3>WPM</h3>
+                    <p id="wpm">0</p>
+                </div>
 
-    <div class="mission-info">
+                <div class="card">
+                    <h3>ACCURACY</h3>
+                    <p id="accuracy">100%</p>
+                </div>
 
-        <p>⏱ Time Left:
-            <span id="time">30</span>s
-        </p>
+            </div>
 
-        <p>⚡ WPM:
-            <span id="wpm">0</span>
-        </p>
+            <div id="textDisplay"></div>
+<div class="progressBox">
+
+    <div id="progressBar"></div>
+
+</div>
+            <textarea
+                id="textInput"
+                placeholder="Start typing here..."
+                autocomplete="off"
+                spellcheck="false"></textarea>
+
+        </div>
+
+        <!-- Result Screen -->
+
+        <div id="resultScreen" class="hidden">
+
+            <h2>MISSION COMPLETE</h2>
+
+            <p id="finalWpm"></p>
+
+            <p id="finalAccuracy"></p>
+
+            <button id="restartBtn">
+                PLAY AGAIN
+            </button>
+
+        </div>
 
     </div>
-
-    <div id="text" class="mission-text">
-
-    </div>
-
-    <textarea
-        id="typingInput"
-        placeholder="Start typing here..."
-    ></textarea>
-
-</section>
-
-    <!-- Result Screen -->
-    <section id="result-screen">
-
-    </section>
 
     <script src="script.js"></script>
 
 </body>
-</html>
+
+</html> 
