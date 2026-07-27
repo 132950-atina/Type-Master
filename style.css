@@ -1,230 +1,314 @@
+/* ===========================
+   TYPEMASTER
+=========================== */
+
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-    background: #050505;
-    color: #00ff88;
-    font-family: Consolas, monospace;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    min-height: 100vh;
-
-    background-image:
-        linear-gradient(rgba(0,255,136,.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,255,136,.06) 1px, transparent 1px);
-
-    background-size: 40px 40px;
-}
-#welcome-screen{
-    width: 800px;
-
-    background: #0b0b0b;
-
-    border: 2px solid #00ff88;
-
-    border-radius: 12px;
-
-    padding: 60px;
-
-    text-align: center;
-
-    box-shadow: 0 0 20px rgba(0,255,136,.25);
-}
-h1{
-    font-size: 60px;
-
-    letter-spacing: 5px;
-
-    margin-bottom: 20px;
-}
-.subtitle{
-    font-size: 22px;
-
-    color: #7dffb3;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 20px;
-}
-
-.description{
-    color: #b0b0b0;
-
-    font-size: 18px;
-
-    line-height: 1.7;
-
-    margin-bottom: 40px;
-}
-#startBtn{
-    padding: 16px 55px;
-
-    font-size: 20px;
-
-    background: transparent;
-
-    color: #00ff88;
-
-    border: 2px solid #00ff88;
-
-    cursor: pointer;
-
-    transition: .3s;
-
-    border-radius: 8px;
-}
-
-#startBtn:hover{
-    background: #00ff88;
-
-    color: black;
-
-    transform: scale(1.05);
-
-    box-shadow: 0 0 20px #00ff88;
-}
-.mission-box{
-
-    margin:40px 0;
-
-    padding:25px;
-
-    border:1px solid #00ff88;
-
-    background:#000;
-
-    text-align:left;
-
-    border-radius:8px;
-
-}
-
-.mission-box h3{
-
-    margin-bottom:20px;
+    background:#050505;
 
     color:#00ff88;
 
-    letter-spacing:2px;
+    font-family:Consolas, monospace;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
 
 }
 
-.mission-box p{
+.container{
 
-    margin:12px 0;
+    width:90%;
 
-    color:#d0d0d0;
+    max-width:900px;
 
-    line-height:1.6;
-
-}
-
-.mission-box strong{
-
-    color:#00ff88;
-
-}
-#loading-screen{
-
-    display:none;
-
-    width:800px;
-
-    background:#0b0b0b;
+    background:#101010;
 
     border:2px solid #00ff88;
 
-    border-radius:12px;
+    border-radius:15px;
 
-    padding:60px;
+    padding:45px;
 
     text-align:center;
 
-    box-shadow:0 0 20px rgba(0,255,136,.25);
+    box-shadow:0 0 18px rgba(0,255,136,.35);
 
 }
-.loading-bar{
 
-    width:100%;
+.hidden{
 
-    height:22px;
+    display:none;
+
+}
+
+h1{
+
+    font-size:58px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+
+    font-family:Consolas, monospace;
+
+    text-shadow:0 0 6px rgba(0,255,136,.45);
+
+}
+
+.subtitle{
+
+    font-size:20px;
+
+    color:#9dffc8;
+
+    margin-bottom:45px;
+
+}
+
+button{
+
+    background:transparent;
+
+    color:#00ff88;
 
     border:2px solid #00ff88;
 
-    margin:40px 0;
+    padding:15px 45px;
+
+    font-size:22px;
+
+    font-family:Consolas, monospace;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    background:#00ff88;
+
+    color:#050505;
+
+    box-shadow:0 0 10px rgba(0,255,136,.35);
+
+}
+
+.stats{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-bottom:35px;
+
+}
+
+.card{
+
+    flex:1;
+
+    border:2px solid #00ff88;
+
+    border-radius:10px;
+
+    padding:18px;
+
+}
+
+.card h3{
+
+    margin-bottom:10px;
+
+    font-size:18px;
+
+}
+
+.card p{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+
+#textDisplay{
+
+    border:2px solid #00ff88;
+
+    border-radius:10px;
+
+    padding:25px;
+
+    min-height:180px;
+
+    text-align:left;
+
+    line-height:1.8;
+
+    font-size:24px;
+
+    margin-bottom:25px;
+
+}
+
+#textInput{
+
+    width:100%;
+
+    height:170px;
+
+    background:#050505;
+
+    color:#00ff88;
+
+    border:2px solid #00ff88;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    resize:none;
+
+    outline:none;
+
+    font-size:22px;
+
+    font-family:Consolas, monospace;
+
+}
+
+#textInput:focus{
+
+    box-shadow:0 0 10px rgba(0,255,136,.35);
+
+}
+
+#resultScreen h2{
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+}
+
+#resultScreen p{
+
+    font-size:24px;
+
+    margin:15px;
+
+}
+
+.correct{
+
+    color:#00ff88;
+
+}
+
+.wrong{
+
+    color:#ff3b3b;
+
+    text-decoration:underline;
+
+}
+
+.current{
+
+    background:#00ff88;
+
+    color:#050505;
+
+}
+/* ===========================
+   BOOT SCREEN
+=========================== */
+
+#bootScreen{
+
+    text-align:left;
+
+    min-height:260px;
+
+    white-space:pre-wrap;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+}
+
+#bootText{
+
+    color:#00ff88;
+
+}
+/* ===========================
+   PROGRESS BAR
+=========================== */
+
+.progressBox{
+
+    width:100%;
+
+    height:12px;
+
+    background:#202020;
+
+    border:1px solid #00ff88;
+
+    border-radius:20px;
 
     overflow:hidden;
 
-}
-.loading-progress{
+    margin-bottom:25px;
 
-    width:0;
+}
+
+#progressBar{
+
+    width:0%;
 
     height:100%;
 
     background:#00ff88;
 
-}
-#loading-text{
-
-    color:#b0b0b0;
-
-    margin-top:20px;
-
-    letter-spacing:2px;
+    transition:.15s;
 
 }
-#loading-screen,
-#mission-screen,
-#result-screen {
-    display: none;
-}
-.mission-info{
-    display:flex;
-    justify-content:space-between;
-    margin:25px 0;
-    font-size:20px;
+/* ===========================
+   BLINKING CURSOR
+=========================== */
+
+.cursor{
+
+    animation:blink .8s infinite;
+
 }
 
-.mission-text{
-    background:#000;
-    border:2px solid #00ff88;
-    border-radius:8px;
-    padding:25px;
-    margin-bottom:25px;
-    line-height:1.8;
-    font-size:20px;
-    color:#d8d8d8;
-    text-align:left;
-}
+@keyframes blink{
 
-#typingInput{
-    width:100%;
-    height:180px;
+    50%{
 
-    background:#000;
+        opacity:0;
 
-    color:#00ff88;
+    }
 
-    border:2px solid #00ff88;
-
-    border-radius:8px;
-
-    padding:20px;
-
-    font-size:20px;
-
-    resize:none;
-
-    font-family:Consolas, monospace;
-}
-
-#typingInput::placeholder{
-    color:#4caf77;
 }

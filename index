@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeMaster</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+<div id="bootScreen">
+
+    <pre id="bootText"></pre>
+
+</div>
+        <!-- Welcome Screen -->
+
+        <div id="welcomeScreen">
+
+            <h1>⌨️𝚃𝚢𝚙𝚎 𝙼𝚊𝚜𝚝𝚎𝚛</h1>
+
+            <p class="subtitle">
+                Test your typing speed and accuracy.
+            </p>
+
+            <button id="startBtn">
+                ▶ START
+            </button>
+
+        </div>
+
+        <!-- Game Screen -->
+
+        <div id="gameScreen" class="hidden">
+
+            <div class="stats">
+
+                <div class="card">
+                    <h3>TIME</h3>
+                    <p id="time">30</p>
+                </div>
+
+                <div class="card">
+                    <h3>WPM</h3>
+                    <p id="wpm">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>ACCURACY</h3>
+                    <p id="accuracy">100%</p>
+                </div>
+
+            </div>
+
+            <div id="textDisplay"></div>
+<div class="progressBox">
+
+    <div id="progressBar"></div>
+
+</div>
+            <textarea
+                id="textInput"
+                placeholder="Start typing here..."
+                autocomplete="off"
+                spellcheck="false"></textarea>
+
+        </div>
+
+        <!-- Result Screen -->
+
+        <div id="resultScreen" class="hidden">
+
+            <h2>MISSION COMPLETE</h2>
+
+            <p id="finalWpm"></p>
+
+            <p id="finalAccuracy"></p>
+
+            <button id="restartBtn">
+                PLAY AGAIN
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html> 
