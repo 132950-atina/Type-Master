@@ -62,9 +62,6 @@ const gameTime = 30;
 let startTime = 0;
 let totalTyped = 0;
 let highScore = localStorage.getItem("highScore") || 0;
-// ==========================
-// START GAME
-// ==========================
 
 startBtn.addEventListener("click", function () {
    backgroundMusic.play().catch(() => {});
