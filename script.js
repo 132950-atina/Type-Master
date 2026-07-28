@@ -1,10 +1,3 @@
-// ==========================
-// TYPEMASTER
-// Session 1
-// ==========================
-
-// ELEMENTS
-
 const welcomeScreen = document.getElementById("welcomeScreen");
 const gameScreen = document.getElementById("gameScreen");
 const resultScreen = document.getElementById("resultScreen");
@@ -24,20 +17,12 @@ const finalAccuracy = document.getElementById("finalAccuracy");
 const bootScreen = document.getElementById("bootScreen");
 const bootText = document.getElementById("bootText");
 const progressBar = document.getElementById("progressBar");
-// ==========================
-// BACKGROUND MUSIC
-// ==========================
-
 const backgroundMusic = new Audio("sounds/music.mp3");
-
 backgroundMusic.loop = true;
-
 backgroundMusic.volume = 0.25;
 const winSound = new Audio("sounds/win.mp3");
 const loseSound = new Audio("sounds/lose.mp3");
 
-// BOOT SEQUENCE
-// ==========================
 
 const bootLines = [
 
@@ -52,9 +37,6 @@ const bootLines = [
 "> Access Granted."
 
 ];
-// ==========================
-// GAME DATA
-// ==========================
 
 const texts = [
 
@@ -132,10 +114,6 @@ currentText.split("").forEach(letter => {
 
 });
 
-// ==========================
-// FINISH GAME
-// ==========================
-
 function finishGame(completed) {
 
     backgroundMusic.pause();
@@ -209,18 +187,11 @@ Math.round((correctLetters / currentText.length) * 100);
     }
 
 }
-
-// ==========================
-// PLAY AGAIN
-// ==========================
 restartBtn.addEventListener("click", function () {
 
     location.reload();
 
 });
-// ==========================
-// CHECK TYPING
-// ==========================
 
 textInput.addEventListener("input", function () {
    
@@ -276,9 +247,6 @@ progressBar.style.width = progress + "%";
     }
 
 });
-// ==========================
-// BOOT ANIMATION
-// ==========================
 
 welcomeScreen.classList.add("hidden");
 
@@ -325,11 +293,6 @@ if (!sessionStorage.getItem("bootPlayed")) {
     welcomeScreen.classList.remove("hidden");
 
 }
-// ==========================
-// ANTI CHEAT
-// ==========================
-
-// Disable Paste
 textInput.addEventListener("paste", function (event) {
 
     event.preventDefault();
@@ -344,7 +307,6 @@ Real hackers type. ⌨️`
 
 });
 
-// Disable Copy
 textInput.addEventListener("copy", function (event) {
 
     event.preventDefault();
